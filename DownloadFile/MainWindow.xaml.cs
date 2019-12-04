@@ -44,7 +44,6 @@ namespace DownloadFile
             var dialog = new SaveFileDialog();
             if (dialog.ShowDialog() == true)
             {
-                var thread = Thread.CurrentThread;
                 using (WebClient client = new WebClient())
                 {
                     client.DownloadFile(Address, dialog.FileName);
